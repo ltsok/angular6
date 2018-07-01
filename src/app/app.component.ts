@@ -36,7 +36,7 @@ export class AppComponent {
         
         //An array of cities
         this.cities2 = [
-            {name: 'New York', code: 'NY'},
+            {name: 'New York111', code: 'NY'},
             {name: 'Rome', code: 'RM'},
             {name: 'London', code: 'LDN'},
             {name: 'Istanbul', code: 'IST'},
