@@ -23,7 +23,9 @@ export class AppComponent {
 
     cars: SelectItem[];
 
+    title: String = 'app';
     constructor() {
+      
         //SelectItem API with label-value pairs
         this.cities1 = [
             {label:'Select City', value:null},
