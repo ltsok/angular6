@@ -1,13 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
-import { CommonModule } from "@angular/common"
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { RouterModule } from '@angular/router';
+import { ROUTER_CONFIG } from './app.routes';
+import { CoreModule } from './core';
 
-
-import {DropdownModule} from 'primeng/dropdown';
+import { InMemoryDataService } from './mock/mock-heroes';
 
 import { AppComponent } from './app.component';
+
+import { HeroesModule } from './components/heroes';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    DropdownModule,
-    FormsModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    CoreModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
+    RouterModule.forRoot(ROUTER_CONFIG)
   ],
   providers: [],
   bootstrap: [AppComponent]
