@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { ROUTER_CONFIG } from './heroes.routes';
@@ -10,7 +9,6 @@ import { HeroJobAdComponent, HeroProfileComponent, AdItem, SharedModule } from '
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule,
     RouterModule.forChild(ROUTER_CONFIG)
   ],
