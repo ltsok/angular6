@@ -15,10 +15,33 @@ export class HeroesComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.heroservice.getHeroes().subscribe((res:any)=> {
+    // this.heroservice.getHeroes().subscribe((res:any)=> {
+    //   console.log(res);
+    // });
+    this.ads = this.heroservice.getAds();
+    // $.ajax({
+    //   url: "http://10.5.43.9:9999/users/all",
+    //   type: "GET",
+    //   // dataType: "jsonp",
+    //   // jsonp: "callback",
+    //   // cache: true,
+    //   success: function (res) {
+    //     console.log(res);
+    //   }
+    // });
+    this.queryAll();
+  }
+
+  queryById(id = 1): void {
+    this.heroservice.queryById(id).subscribe((res) => {
       console.log(res);
     });
-    this.ads = this.heroservice.getAds();
+  }
+
+  queryAll(): void {
+    this.heroservice.queryALL().subscribe((res) => {
+      console.log(res);
+    });
   }
 
 }
