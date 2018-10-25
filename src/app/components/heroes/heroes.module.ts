@@ -5,6 +5,8 @@ import { ROUTER_CONFIG } from './heroes.routes';
 import { HeroesComponent } from './heroes.component'
 import { HeroService } from './heroes.service';
 
+import { apiUrl } from '@core';
+
 import { HeroJobAdComponent, HeroProfileComponent, AdItem, SharedModule } from '@shared';
 
 @NgModule({
@@ -13,7 +15,10 @@ import { HeroJobAdComponent, HeroProfileComponent, AdItem, SharedModule } from '
     RouterModule.forChild(ROUTER_CONFIG)
   ],
   declarations: [HeroesComponent],
-  providers: [HeroService],
+  providers: [
+    HeroService,
+    { provide: apiUrl, useValue: 'ltsokla' }
+  ],
   entryComponents: [HeroJobAdComponent, HeroProfileComponent]
 })
 export class HeroesModule { }

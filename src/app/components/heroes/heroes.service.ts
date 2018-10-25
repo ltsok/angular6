@@ -17,7 +17,7 @@ export class HeroService {
     getHeroes(): Observable<Hero> {
         return this.http.get('/heroes');
     }
-    
+
     getAds() {
         return [
             new AdItem(HeroProfileComponent, { name: 'Bombasto', bio: 'Brave as they come' }),
@@ -42,10 +42,10 @@ export class HeroService {
 
     queryALL(): Observable<any> {
         return this.http.get(`http://192.168.1.102:9999/users/all`);
-        //return this.http.jsonP("http://10.5.43.9:9999/users/all", "callback");
+        // return this.http.jsonP("http://10.5.43.9:9999/users/all", "callback");
     }
 
     deleteUser(body: any): Observable<any> {
-        return this.http.post("http://10.5.43.9:9999/users/deleteUser", body);
+        return this.http.post('http://10.5.43.9:9999/users/deleteUser', body);
     }
 }

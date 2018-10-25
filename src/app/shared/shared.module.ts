@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { directives } from './directives';
 
 import {
   MatToolbarModule,
@@ -15,10 +16,10 @@ import {
   MatAutocompleteModule,
   MatMenuModule,
   MatCheckboxModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSidenavModule
 } from '@angular/material';
 
-import { directives } from './directives'
 
 const modules = [
   CommonModule,
@@ -36,7 +37,8 @@ const modules = [
   MatAutocompleteModule,
   MatMenuModule,
   MatCheckboxModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSidenavModule
 ];
 
 @NgModule({

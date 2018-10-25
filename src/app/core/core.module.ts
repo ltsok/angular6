@@ -3,11 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { SharedModule } from '@shared';
 
-import { HttpService } from './http/http.service';
+import { HttpService } from './service/index';
 
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './layout/index';
+import { FooterComponent } from './layout/index';
+import { SidebarComponent } from './layout/index';
 
 @NgModule({
   imports: [

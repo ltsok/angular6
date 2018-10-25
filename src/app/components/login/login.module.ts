@@ -12,7 +12,7 @@ import { RegisterComponent } from './register/register.component';
    RouterModule.forChild(ROUTER_CONFIG)
   ],
   declarations: [
-    LoginComponent, 
+    LoginComponent,
     RegisterComponent
   ]
 })

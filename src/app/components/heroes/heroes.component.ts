@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { HeroService } from './heroes.service';
 import { AdItem } from '@shared';
+
+import { apiUrl } from '@core';
 
 @Component({
   selector: 'app-heroes',
@@ -11,8 +13,11 @@ export class HeroesComponent implements OnInit {
   ads: AdItem[];
 
   constructor(
-    private heroservice: HeroService
-  ) {}
+    private heroservice: HeroService,
+    @Inject(apiUrl) private url 
+  ) {
+    console.log(url);
+  }
 
   ngOnInit() {
     // this.heroservice.getHeroes().subscribe((res:any)=> {
@@ -29,7 +34,7 @@ export class HeroesComponent implements OnInit {
     //     console.log(res);
     //   }
     // });
-    this.queryAll();
+    // this.queryAll();
   }
 
   queryById(id = 1): void {
