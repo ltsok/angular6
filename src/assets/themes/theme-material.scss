@@ -1,4 +1,6 @@
 // @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import '/assets/font-material/iconfonts.css';
 @import '~@angular/material/theming';
 @include mat-core();
 $my-app-primary: mat-palette($mat-indigo);
