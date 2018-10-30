@@ -14,9 +14,9 @@ export class HeroService {
         private http: HttpService
     ) {}
 
-    getHeroes(): Observable<Hero> {
-        return this.http.get('/heroes');
-    }
+    // getHeroes(): Observable<Hero> {
+    //     return this.http.get('/heroes');
+    // }
 
     getAds() {
         return [
@@ -36,16 +36,16 @@ export class HeroService {
         ];
     }
 
-    queryById(id): Observable<any> {
-        return this.http.get(`/users/${id}`);
-    }
+    // queryById(id): Observable<any> {
+    //     return this.http.get(`/users/${id}`);
+    // }
 
-    queryALL(): Observable<any> {
-        return this.http.get(`http://192.168.1.102:9999/users/all`);
-        // return this.http.jsonP("http://10.5.43.9:9999/users/all", "callback");
-    }
+    // queryALL(): Observable<any> {
+    //     return this.http.get(`http://192.168.1.102:9999/users/all`);
+    //     // return this.http.jsonP("http://10.5.43.9:9999/users/all", "callback");
+    // }
 
-    deleteUser(body: any): Observable<any> {
-        return this.http.post('http://10.5.43.9:9999/users/deleteUser', body);
-    }
+    // deleteUser(body: any): Observable<any> {
+    //     return this.http.post('http://10.5.43.9:9999/users/deleteUser', body);
+    // }
 }

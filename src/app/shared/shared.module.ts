@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { directives } from './directives';
+import { LoggerService } from './../core/service/logger/logger.service';
 
 import {
   MatToolbarModule,
@@ -17,7 +18,8 @@ import {
   MatMenuModule,
   MatCheckboxModule,
   MatTooltipModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 
@@ -38,7 +40,8 @@ const modules = [
   MatMenuModule,
   MatCheckboxModule,
   MatTooltipModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({
@@ -53,4 +56,11 @@ const modules = [
     ...directives
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+
+  constructor(
+    private logger: LoggerService
+  ) {
+    this.logger.info('sharee', 'Initialize shared module.');
+  }
+}

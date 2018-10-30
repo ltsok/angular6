@@ -9,7 +9,8 @@ import { ROUTER_CONFIG } from './app.routes';
 import { InMemoryDataService } from './mock/mock-heroes';
 
 import { AppComponent } from './app.component';
-import { LoginModule } from './components/login/login.module'
+import { LoginModule } from './components/login/login.module';
+import { GlobalModule } from './templet/global/global.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginModule } from './components/login/login.module'
     BrowserModule,
     CoreModule,
     SharedModule,
+    GlobalModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),

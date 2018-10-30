@@ -37,16 +37,16 @@ export class HeroesComponent implements OnInit {
     // this.queryAll();
   }
 
-  queryById(id = 1): void {
-    this.heroservice.queryById(id).subscribe((res) => {
-      console.log(res);
-    });
-  }
+  // queryById(id = 1): void {
+  //   this.heroservice.queryById(id).subscribe((res) => {
+  //     console.log(res);
+  //   });
+  // }
 
-  queryAll(): void {
-    this.heroservice.queryALL().subscribe((res) => {
-      console.log(res);
-    });
-  }
+  // queryAll(): void {
+  //   this.heroservice.queryALL().subscribe((res) => {
+  //     console.log(res);
+  //   });
+  // }
 
 }
