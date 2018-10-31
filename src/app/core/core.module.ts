@@ -82,6 +82,8 @@ export class CoreModule {
     private logger: LoggerService,
     @Optional() @SkipSelf() parentModule?: CoreModule
   ) {
+    //Optional() 可选参数,如果不存在,则正常构造,避免死循环
+    //SkipSelf() 避免在本模块再次注入CoreModule,去父级寻找依赖
     if (parentModule) {
       throw new Error(
         'CoreModule is already loaded. Import it in the AppModule only');

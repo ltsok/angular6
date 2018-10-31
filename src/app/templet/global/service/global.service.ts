@@ -29,6 +29,7 @@ export class GlobalService implements ITpiGlobal {
    * @memberof GlobalService
    */
   showLoading(): void {
+    console.log('show loading');
     $("#coverload").show();
   }
 

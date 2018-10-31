@@ -3,9 +3,9 @@ import { Routes } from '@angular/router';
 export const ROUTER_CONFIG: Routes = [
     {
         path: '',
-        redirectTo: '/heroes',
+        redirectTo: 'login',
         pathMatch: 'full'
     },
-    // { path: 'login', loadChildren: './components/login/#LoginModule' },
+    { path: 'login', loadChildren: './components/login/#LoginModule' },
     { path: 'heroes', loadChildren: './components/heroes#HeroesModule' },
 ];

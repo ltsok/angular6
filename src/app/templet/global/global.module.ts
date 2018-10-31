@@ -14,6 +14,9 @@ import { constant } from './global.constant';
     ],
     providers: [
         { provide: 'tpi.global', useClass: GlobalService }
+    ],
+    exports: [
+        GlobalComponent
     ]
 })
 
