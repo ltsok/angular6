@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { LoginComponent } from './login/login.component';
+import { DefaultLoginComponent } from './default-login/default-login.component';
 import { SharedModule } from '@shared';
 import { ROUTER_CONFIG } from './login.routes';
 import { RegisterComponent } from './register/register.component';
@@ -12,7 +12,7 @@ import { RegisterComponent } from './register/register.component';
    RouterModule.forChild(ROUTER_CONFIG)
   ],
   declarations: [
-    LoginComponent,
+    DefaultLoginComponent,
     RegisterComponent
   ]
 })

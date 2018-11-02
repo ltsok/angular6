@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { DefaultLoginComponent } from './default-login/default-login.component';
 
 
 export const ROUTER_CONFIG: Routes = [
     {
         path: 'login',
-        component: LoginComponent
+        component: DefaultLoginComponent
     },
     {
         path: 'register',
