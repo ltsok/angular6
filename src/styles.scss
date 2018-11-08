@@ -30,29 +30,6 @@ main{
     width:100%;
 }
 
-.hero-profile {
-    border: 1px solid gray;
-    padding: 5px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    border-radius: 10px;
-    background-color: lightgreen;
-    color: black;
-}
-
-.job-ad {
-    border: 1px solid gray;
-    padding: 5px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    border-radius: 10px;
-    background-color: lightblue;
-    color: black;
-}
-
-.ad-banner {
-    width: 400px;
-}
 // 自定义滚动条
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -70,6 +47,7 @@ main{
 ::selection {
     background: #d7dbf0;
 }
+
 // 自定义全局a链接
 .post-title-link::after {
     content: "";
@@ -108,4 +86,67 @@ a:hover {
 }
 .post-title-link:hover {
     text-decoration: none;
+}
+
+// 内容超出部分截断
+// 单行内容截断
+.single_cut {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+// 定位元素实现多行文本截断(文本必须超出)
+.multi_cut {
+    position: relative;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+}
+.multi_cut::after {
+    content: "...";
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 1px 45px;
+    background: -webkit-gradient(linea from(rgba(255,255,255,0)), to(white), color-stop(50%, white));
+}
+// float特性实现多行文本截断(最佳实现)
+.wrap {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.wrap .text {
+    float: right;
+    margin-left: -5px;
+    width: 100%;
+    word-break: break-all;
+}
+.wrap::before {
+    float: left;
+    width: 5px;
+    content: '';
+    height: 40px;
+}
+.wrap::after {
+    float: right;
+    content: "...";
+    height: 20px;
+    line-height: 20px;
+    /* 为三个省略号设置宽度 */
+    width: 3em;
+    /* 使盒子不占宽度 */
+    margin-left: -3em;
+    /* 移动省略号的位置 */
+    position: relative;
+    left: 100%;
+    top: -20px;
+    text-align: center;
+    padding-left: 5px;
+    background: -webkit-linear-gradient(left top, right top, from(rgba(255,255,255,0)), to(white), color-stop(40%, white));
+    background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white);
+    background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white);
+    background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white);
 }

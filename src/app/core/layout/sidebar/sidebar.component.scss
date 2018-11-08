@@ -1,5 +1,7 @@
-mat-icon{
-    align-self:flex-start;
+mat-list-item {
+    i {
+        align-self:flex-start;
+    }
 }
 .brand-wrap {
     background-image: url('/assets/img/sidebar/brand.jpg');
@@ -33,4 +35,34 @@ mat-icon{
             }
         }
     }
+}
+.lts-font-sidebar {
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    color: rgb(253, 87, 144);
+    border-radius: 50%;
+    margin: 12px;
+}
+.svgicon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+// 覆盖material自带样式
+mat-nav-list {
+    user-select: none;
+    mat-list-item {
+        height: 45px !important;
+    }
+    h3 {
+        font-weight: 500 !important;
+        color: #727272 !important
+    }
+}
+.mat-list-text {
+    padding-left: 25px !important;
 }

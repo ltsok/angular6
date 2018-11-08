@@ -19,7 +19,7 @@ import {
   MatCheckboxModule,
   MatTooltipModule,
   MatSidenavModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
 } from '@angular/material';
 
 

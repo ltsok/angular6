@@ -6,6 +6,6 @@ export const ROUTER_CONFIG: Routes = [
         redirectTo: 'login',
         pathMatch: 'full'
     },
-    { path: 'login', loadChildren: './components/login/#LoginModule' },
-    { path: 'heroes', loadChildren: './components/heroes#HeroesModule' },
+    { path: 'login', loadChildren: './components/login/login.module#LoginModule' },
+    { path: 'heroes', loadChildren: './components/heroes/heroes.module#HeroesModule' },
 ];

@@ -23,11 +23,11 @@ import { constant } from './global.constant';
 export class GlobalModule {
     
     /**
-   * 构造函数
-   * @param {LoggerService} logger
-   * @memberof GlobalModule
-   */
-  constructor(private logger: LoggerService) {
-    this.logger.info(constant.identifier, 'Initialize global module.');
-  }
+     * 构造函数
+     * @param {LoggerService} logger
+     * @memberof GlobalModule
+     */
+    constructor(private logger: LoggerService) {
+        this.logger.info(constant.identifier, 'Initialize global module.');
+    }
 }
