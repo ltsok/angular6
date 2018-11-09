@@ -74,3 +74,18 @@ export class TpiMenuItemType {
   /** 是否是常驻页 */
   isResidentPage: boolean = false;
 }
+
+export class SubMenuItems {
+
+  /** 菜单名称 */
+  name: string;
+
+  /** 菜单路径 */
+  path: string;
+
+  /** 菜单图标 */
+  icon: string;
+
+  /** 激活状态 */
+  isActive: boolean;
+}

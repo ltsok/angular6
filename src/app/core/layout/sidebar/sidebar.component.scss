@@ -52,17 +52,4 @@ mat-list-item {
     fill: currentColor;
     overflow: hidden;
 }
-// 覆盖material自带样式
-mat-nav-list {
-    user-select: none;
-    mat-list-item {
-        height: 45px !important;
-    }
-    h3 {
-        font-weight: 500 !important;
-        color: #727272 !important
-    }
-}
-.mat-list-text {
-    padding-left: 25px !important;
-}
+

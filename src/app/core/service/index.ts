@@ -7,3 +7,5 @@ export * from './tpi/tpi-global/tpi-global.interface';
 export * from './tpi/tpi-global.service';
 export * from './i18n/i18n.pipe';
 export * from './i18n/i18n.service';
+export * from './tpi/tpi-menu/tpi-menu.interface';
+export * from './tpi/tpi-menu/tpi-menu.model';

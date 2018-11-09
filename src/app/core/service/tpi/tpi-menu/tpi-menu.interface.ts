@@ -1,4 +1,4 @@
-import { TpiMenuItem } from './tpi-menu.model'
+import { TpiMenuItem, SubMenuItems } from './tpi-menu.model'
 
 /**
  * 菜单接口
@@ -13,4 +13,12 @@ export interface ITpiMenu {
    * @memberof ITpiMenu
    */
   getMenuItems(): TpiMenuItem[];
+
+
+  /**
+   * 获取侧边栏菜单
+   * @returns {SubMenuItems[]}
+   * @memberof ITpiMenu
+   */
+  getSubMenuItems(): SubMenuItems[];
 }

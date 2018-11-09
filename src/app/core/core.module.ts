@@ -11,6 +11,7 @@ import { constant } from './service/i18n/i18n.constant';
 import { HeaderComponent, FooterComponent, SidebarComponent } from './layout';
 import { HttpService, LoggerService, CacheService, StorageService, TpiGlobalService, I18nService, I18nPipe } from './service';
 import { loadSvgResources } from '@utils';
+import { MenuModule } from '../templet/menu/menu.module';
 // components
 const components = [
   HeaderComponent,
@@ -52,6 +53,7 @@ export function createTranslateHttpLoader(http: HttpClient) {
     HttpClientJsonpModule,//jsonp跨域
     SharedModule,
     BrowserAnimationsModule,
+    MenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

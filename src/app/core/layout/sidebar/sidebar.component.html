@@ -9,11 +9,4 @@
         </div>
     </div>
 </div>
-<mat-nav-list>
-    <mat-list-item *ngFor = "let item of menus">
-        <svg matListIcon class="svgicon" aria-hidden="true">
-            <use xlink:href="#lts-default1"></use>
-        </svg>
-        <h3 matLine routerLink="/login">Heroes</h3>
-    </mat-list-item>
-</mat-nav-list>
+<lts-menu></lts-menu>
