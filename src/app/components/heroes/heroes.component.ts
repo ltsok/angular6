@@ -1,17 +1,21 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, HostBinding } from '@angular/core';
 import { HeroService } from './heroes.service';
-import { AdItem } from '@shared';
-
+import { AdItem, slideToRight } from '@shared';
 import { apiUrl } from '@core';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss']
+  styleUrls: ['./heroes.component.scss'],
+  animations: [
+    slideToRight
+  ]
 })
 export class HeroesComponent implements OnInit {
-  ads: AdItem[];
 
+  @HostBinding('@routerAnim') state;
+  ads: AdItem[];
+  isOpen: boolean = true;
   constructor(
     private heroservice: HeroService,
     @Inject(apiUrl) private url 

@@ -17,8 +17,8 @@ import { GlobalModule } from './templet/global/global.module';
     AppComponent
   ],
   imports: [
-    LoginModule,
     BrowserModule,
+    LoginModule,
     CoreModule,
     SharedModule,
     GlobalModule,

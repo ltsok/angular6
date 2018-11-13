@@ -97,7 +97,7 @@ export class CoreModule {
         'CoreModule is already loaded. Import it in the AppModule only');
     }
     // 加载svg图标
-    loadSvgResources(ir, ds);
+    //loadSvgResources(ir, ds);
     this.logger.info('core', 'Initialize core module.');
   }
 }
